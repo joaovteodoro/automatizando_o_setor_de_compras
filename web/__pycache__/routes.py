@@ -1,12 +1,8 @@
 from main import app
-from flask import render_template
+from manipulacao_de_planilha import informacoes_gerais
 
 #rotas
 @app.route("/") #decorator (dá uma funcionalidade extra para a função abaixo dele)
-def homepage():
-    return render_template("homepage.html")
+def mostrar_informacoes():
+    return informacoes_gerais()
 
-
-@app.route("/execucoes") #decorator (dá uma funcionalidade extra para a função abaixo dele)
-def execucoes():
-    return "Meu site no Flask"
